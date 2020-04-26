@@ -1,0 +1,79 @@
+@import "palette";
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono&family=Spartan:wght@400;700&display=swap");
+
+html {
+    font-family: "Spartan", sans-serif;
+    font-size: 20px;
+
+    margin: 0;
+    padding: 0;
+
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: $primaryDark;
+    color: $light;
+    margin: 0;
+    padding: 0;
+}
+
+#hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+
+    #hero-content {
+        margin-left: 3vw;
+        #name {
+            font-size: 4rem;
+            margin: 0;
+        }
+        #tagline {
+            font-variant-ligatures: no-common-ligatures; // weird fi problem
+            font-family: "Space Mono", monospace;
+            font-size: 2rem;
+            margin-top: 0;
+            margin-bottom: 1rem;
+        }
+
+        #social-links {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            li {
+                display: inline;
+                margin-right: 1rem;
+                a {
+                    color: $primaryLight;
+                    text-decoration: none;
+                }
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+    #scroll-icon {
+        width: 2vw;
+        fill: $light;
+        // width: 10vw;
+        position: absolute;
+        margin-left: -1vw;
+        left: 50%;
+        bottom: 5vh;
+    }
+}
+
+#projects-section {
+    background-color: $light;
+    color: $secondary;
+
+    padding: 1vw;
+    border-radius: 10px;
+    margin: 3vh 3vw;
+    p {
+        font-family: "Space Mono", monospace;
+    }
+}

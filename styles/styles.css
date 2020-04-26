@@ -1,0 +1,89 @@
+/* HEX */
+/* GRADIENT */
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono&family=Spartan:wght@400;700&display=swap");
+html {
+  font-family: "Spartan", sans-serif;
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #1a936fff;
+  color: #f3e9d2ff;
+  margin: 0;
+  padding: 0;
+}
+
+#hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+}
+
+#hero #hero-content {
+  margin-left: 3vw;
+}
+
+#hero #hero-content #name {
+  font-size: 4rem;
+  margin: 0;
+}
+
+#hero #hero-content #tagline {
+  -webkit-font-variant-ligatures: no-common-ligatures;
+          font-variant-ligatures: no-common-ligatures;
+  font-family: "Space Mono", monospace;
+  font-size: 2rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+#hero #hero-content #social-links {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#hero #hero-content #social-links li {
+  display: inline;
+  margin-right: 1rem;
+  font-size: 1.5rem;
+}
+
+#hero #hero-content #social-links li a {
+  color: #c6dabfff;
+  text-decoration: none;
+}
+
+#hero #scroll-icon {
+  width: 2vw;
+  fill: #f3e9d2ff;
+  position: absolute;
+  margin-left: -1vw;
+  left: 50%;
+  bottom: 5vh;
+}
+
+#projects-section {
+  background-color: #f3e9d2ff;
+  color: #114b5fff;
+  padding: 1vw;
+  border-radius: 10px;
+  margin: 3vh 3vw;
+}
+
+#projects-section p {
+  font-family: "Space Mono", monospace;
+}
+/*# sourceMappingURL=styles.css.map */
