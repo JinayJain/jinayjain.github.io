@@ -1,3 +1,8 @@
+/*
+
+    TO ANY REAL CSS/SASS DEVELOPER READING THIS, I'M SORRY.
+
+*/
 /* HEX */
 /* GRADIENT */
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono&family=Spartan:wght@400;700&display=swap");
@@ -14,6 +19,10 @@ body {
   color: #f3e9d2ff;
   margin: 0;
   padding: 0;
+}
+
+p {
+  font-family: "Space Mono", monospace;
 }
 
 #hero {
@@ -37,6 +46,7 @@ body {
 #hero #hero-content #name {
   font-size: 4rem;
   margin: 0;
+  text-shadow: 6px 6px 0px #114b5fff;
 }
 
 #hero #hero-content #tagline {
@@ -76,14 +86,29 @@ body {
 }
 
 #projects-section {
-  background-color: #f3e9d2ff;
-  color: #114b5fff;
   padding: 1vw;
   border-radius: 10px;
-  margin: 3vh 3vw;
 }
 
-#projects-section p {
-  font-family: "Space Mono", monospace;
+#projects-section #projects-header {
+  font-size: 2rem;
+  text-shadow: 3px 3px 0px #114b5fff;
+  margin: 30px;
+}
+
+#projects-section ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.light-box {
+  padding: 20px;
+  margin: 30px;
+  border-radius: 15px;
+  -webkit-box-shadow: 10px 10px 0px #114b5fff;
+          box-shadow: 10px 10px 0px #114b5fff;
+  background-color: #f3e9d2ff;
+  color: #114b5fff;
 }
 /*# sourceMappingURL=styles.css.map */

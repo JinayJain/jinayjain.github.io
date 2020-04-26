@@ -1,3 +1,9 @@
+/*
+
+    TO ANY REAL CSS/SASS DEVELOPER READING THIS, I'M SORRY.
+
+*/
+
 @import "palette";
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono&family=Spartan:wght@400;700&display=swap");
 
@@ -18,6 +24,10 @@ body {
     padding: 0;
 }
 
+p {
+    font-family: "Space Mono", monospace;
+}
+
 #hero {
     display: flex;
     flex-direction: column;
@@ -29,6 +39,7 @@ body {
         #name {
             font-size: 4rem;
             margin: 0;
+            text-shadow: 6px 6px 0px $secondary;
         }
         #tagline {
             font-variant-ligatures: no-common-ligatures; // weird fi problem
@@ -67,13 +78,26 @@ body {
 }
 
 #projects-section {
-    background-color: $light;
-    color: $secondary;
-
     padding: 1vw;
     border-radius: 10px;
-    margin: 3vh 3vw;
-    p {
-        font-family: "Space Mono", monospace;
+
+    #projects-header {
+        font-size: 2rem;
+        text-shadow: 3px 3px 0px $secondary;
+        margin: 30px;
     }
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.light-box {
+    padding: 20px;
+    margin: 30px;
+    border-radius: 15px;
+    box-shadow: 10px 10px 0px $secondary;
+    background-color: $light;
+    color: $secondary;
 }
