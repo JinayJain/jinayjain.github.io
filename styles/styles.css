@@ -25,6 +25,11 @@ p {
   font-family: "Space Mono", monospace;
 }
 
+h1 {
+  font-size: 2rem;
+  text-shadow: 3px 3px 0px #114b5fff;
+}
+
 #hero {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -77,7 +82,7 @@ p {
 }
 
 #hero #scroll-icon {
-  width: 2vw;
+  width: 20px;
   fill: #f3e9d2ff;
   position: absolute;
   margin-left: -1vw;
@@ -86,14 +91,18 @@ p {
 }
 
 #projects-section {
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 1vw;
-  border-radius: 10px;
+}
+
+#projects-section #projects-content {
+  margin: 0 5%;
 }
 
 #projects-section #projects-header {
   font-size: 2rem;
   text-shadow: 3px 3px 0px #114b5fff;
-  margin: 30px;
 }
 
 #projects-section ul {
@@ -102,10 +111,13 @@ p {
   padding: 0;
 }
 
+#projects-section ul li {
+  margin: 30px 0;
+}
+
 .light-box {
   padding: 20px;
-  margin: 30px;
-  border-radius: 15px;
+  border-radius: 10px;
   -webkit-box-shadow: 10px 10px 0px #114b5fff;
           box-shadow: 10px 10px 0px #114b5fff;
   background-color: #f3e9d2ff;
