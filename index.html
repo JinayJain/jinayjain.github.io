@@ -17,7 +17,7 @@
             <!-- TODO: Add a small MNIST demo to the right of hero content stuff-->
             <div id="hero-content">
                 <h1 id="name">Jinay Jain</h1>
-                <h3 id="tagline">Hogwarts-certified data wizard</h3>
+                <h3 id="tagline">I solve your problems with data.</h3>
                 <ul id="social-links">
                     <li>
                         <a href="https://github.com/jinayjain/">
@@ -27,6 +27,11 @@
                     <li>
                         <a href="#projects-section">
                             <i class="fa fa-code"></i> projects
+                        </a>
+                    </li>
+                    <li>
+                        <a href="blog">
+                            <i class="fa fa-quote-right"></i> blog
                         </a>
                     </li>
                 </ul>
@@ -45,25 +50,70 @@
 
                 <ul>
                     <li class="light-box">
-                        <h3>Project 1</h3>
+                        <div class="project-title-bar">
+                            <a href="https://pypi.org/project/timidity/">
+                                <h3>TiMIDIty</h3>
+                            </a>
+                            <ul class="project-links">
+                                <li>
+                                    <a href="https://pypi.org/project/timidity/"
+                                        ><i
+                                            class="project-link-item fab fa-python"
+                                        ></i
+                                    ></a>
+                                </li>
+                                <li>
+                                    <a
+                                        href="https://github.com/JinayJain/timidity"
+                                        ><i
+                                            class="project-link-item fa fa-github"
+                                        ></i
+                                    ></a>
+                                </li>
+                            </ul>
+                        </div>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Esse ad expedita officiis, perspiciatis nemo
-                            fuga quas fugiat laudantium cupiditate placeat! Sit,
-                            doloremque pariatur. Suscipit ipsum est nesciunt
-                            laboriosam in recusandae dolor, aliquid, voluptates
-                            ex rerum voluptatem aut impedit repellendus
-                            provident dignissimos. Minima exercitationem
-                            architecto laboriosam esse voluptatem sequi beatae
-                            consequatur!
+                            I built a Python library that parses MIDI files in
+                            bytes and plays them as audio. For this project, I
+                            employed the MIDI
+                            <a
+                                href="http://www.music.mcgill.ca/~ich/classes/mumt306/StandardMIDIfileformat.html"
+                                >file specification</a
+                            >
+                            to decode the file into audio data. To play the
+                            audio, I used signal processing techniques and
+                            frequency modulation to generate the audio signal
+                            that was sent to the device. Finally, I used the
+                            Python packaging system to deploy TiMIDIty to the
+                            Python Package Index.
                         </p>
                     </li>
                     <li class="light-box">
-                        <h3>Project 2</h3>
+                        <div class="project-title-bar">
+                            <a href="http://jinayjain.github.io/mnist">
+                                <h3>MNIST Recognizer</h3>
+                            </a>
+                            <ul class="project-links">
+                                <li>
+                                    <a href="http://jinayjain.github.io/mnist"
+                                        ><i class="fa fa-window-maximize"></i
+                                    ></a>
+                                </li>
+                                <li>
+                                    <a href="https://github.com/JinayJain/mnist"
+                                        ><i
+                                            class="project-link-item fa fa-github"
+                                        ></i
+                                    ></a>
+                                </li>
+                            </ul>
+                        </div>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing
-                            elit. Obcaecati, facilis corporis. Unde vitae quis a
-                            blanditiis non officia, doloremque error.
+                            I trained a convolutional neural network on the
+                            MNIST digit dataset in TensorFlow and saved the
+                            model for web deployment. Using the Tensorflow.js
+                            and React, I created a small web application that
+                            recognizer user-drawn digits on an HTML canvas.
                         </p>
                     </li>
                     <li class="light-box">

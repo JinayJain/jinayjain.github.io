@@ -9,6 +9,8 @@
 html {
   font-family: "Spartan", sans-serif;
   font-size: 20px;
+  -webkit-font-variant-ligatures: no-common-ligatures;
+          font-variant-ligatures: no-common-ligatures;
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
@@ -23,6 +25,13 @@ body {
 
 p {
   font-family: "Space Mono", monospace;
+}
+
+a {
+  outline: none;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+  color: inherit;
 }
 
 h1 {
@@ -55,8 +64,6 @@ h1 {
 }
 
 #hero #hero-content #tagline {
-  -webkit-font-variant-ligatures: no-common-ligatures;
-          font-variant-ligatures: no-common-ligatures;
   font-family: "Space Mono", monospace;
   font-size: 2rem;
   margin-top: 0;
@@ -71,9 +78,15 @@ h1 {
 }
 
 #hero #hero-content #social-links li {
-  display: inline;
-  margin-right: 1rem;
+  margin-bottom: 1rem;
   font-size: 1.5rem;
+}
+
+@media (min-width: 576px) {
+  #hero #hero-content #social-links li {
+    display: inline;
+    margin-right: 1rem;
+  }
 }
 
 #hero #hero-content #social-links li a {
@@ -98,6 +111,48 @@ h1 {
 
 #projects-section #projects-content {
   margin: 0 5%;
+}
+
+#projects-section .project-title-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#projects-section .project-title-bar h3 {
+  min-width: 40%;
+}
+
+#projects-section .project-links {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+#projects-section .project-links li {
+  margin: 0;
+  margin-right: 20px;
+  font-size: 1.5rem;
+}
+
+#projects-section .project-links li a {
+  color: #114b5fff;
+}
+
+#projects-section .project-links li:last-child {
+  margin-right: 0px;
 }
 
 #projects-section #projects-header {

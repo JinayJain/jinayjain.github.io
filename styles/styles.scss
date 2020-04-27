@@ -5,11 +5,13 @@
 */
 
 @import "palette";
+@import "mixins";
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono&family=Spartan:wght@400;700&display=swap");
 
 html {
     font-family: "Spartan", sans-serif;
     font-size: 20px;
+    font-variant-ligatures: no-common-ligatures;
 
     margin: 0;
     padding: 0;
@@ -26,6 +28,12 @@ body {
 
 p {
     font-family: "Space Mono", monospace;
+}
+
+a {
+    outline: none;
+    text-decoration: underline dotted;
+    color: inherit;
 }
 
 h1 {
@@ -47,7 +55,6 @@ h1 {
             text-shadow: 6px 6px 0px $secondary;
         }
         #tagline {
-            font-variant-ligatures: no-common-ligatures; // weird fi problem
             font-family: "Space Mono", monospace;
             font-size: 2rem;
             margin-top: 0;
@@ -60,8 +67,12 @@ h1 {
             padding: 0;
             overflow: hidden;
             li {
-                display: inline;
-                margin-right: 1rem;
+                @include sm {
+                    display: inline;
+                    margin-right: 1rem;
+                }
+                margin-bottom: 1rem;
+
                 a {
                     color: $primaryLight;
                     text-decoration: none;
@@ -90,10 +101,37 @@ h1 {
     #projects-content {
         margin: 0 5%;
     }
+    .project-title-bar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+        h3 {
+            min-width: 40%;
+        }
+    }
+    .project-links {
+        display: inline-flex;
+        li {
+            margin: 0;
+            margin-right: 20px;
+            font-size: 1.5rem;
+
+            a {
+                color: $secondary;
+            }
+        }
+
+        li:last-child {
+            margin-right: 0px;
+        }
+    }
     #projects-header {
         font-size: 2rem;
         text-shadow: 3px 3px 0px $secondary;
     }
+
     ul {
         list-style-type: none;
         margin: 0;
