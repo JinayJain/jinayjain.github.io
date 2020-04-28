@@ -14,11 +14,6 @@ html {
     scroll-behavior: smooth;
 }
 
-::selection {
-    background-color: $secondaryLight;
-    color: $light;
-}
-
 p {
     font-family: "Space Mono", monospace;
 }

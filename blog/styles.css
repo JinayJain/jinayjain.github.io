@@ -12,16 +12,6 @@ html {
   scroll-behavior: smooth;
 }
 
-::-moz-selection {
-  background-color: #174f58;
-  color: #f3e9d2ff;
-}
-
-::selection {
-  background-color: #174f58;
-  color: #f3e9d2ff;
-}
-
 p {
   font-family: "Space Mono", monospace;
 }

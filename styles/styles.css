@@ -85,7 +85,7 @@ h1 {
 @media (min-width: 576px) {
   #hero #hero-content #social-links li {
     display: inline;
-    margin-right: 1rem;
+    margin-right: 1.5rem;
   }
 }
 
@@ -98,9 +98,10 @@ h1 {
   width: 20px;
   fill: #f3e9d2ff;
   position: absolute;
-  margin-left: -1vw;
+  margin-left: -20px;
   left: 50%;
   bottom: 5vh;
+  padding: 10px;
 }
 
 #projects-section {
@@ -132,6 +133,7 @@ h1 {
 }
 
 #projects-section .project-title-bar h3 {
+  margin-bottom: 0;
   min-width: 40%;
 }
 
