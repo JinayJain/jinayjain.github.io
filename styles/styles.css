@@ -34,9 +34,39 @@ a {
   color: inherit;
 }
 
+a:hover {
+  color: #1a936fff;
+}
+
 h1 {
   font-size: 2rem;
   text-shadow: 3px 3px 0px #114b5fff;
+}
+
+@-webkit-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-110%);
+    transform: translateY(-110%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0%);
+    transform: translateY(0%);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-110%);
+    transform: translateY(-110%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0%);
+    transform: translateY(0%);
+  }
 }
 
 #hero {
@@ -78,13 +108,14 @@ h1 {
 }
 
 #hero #hero-content #social-links li {
+  display: block;
   margin-bottom: 1rem;
   font-size: 1.5rem;
 }
 
 @media (min-width: 576px) {
   #hero #hero-content #social-links li {
-    display: inline;
+    display: inline-block;
     margin-right: 1.5rem;
   }
 }
@@ -92,6 +123,39 @@ h1 {
 #hero #hero-content #social-links li a {
   color: #c6dabfff;
   text-decoration: none;
+}
+
+#hero #hero-content #social-links li:nth-child(1) {
+  -webkit-animation-name: fadeInUp;
+          animation-name: fadeInUp;
+  -webkit-animation-duration: 0.7s;
+          animation-duration: 0.7s;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+#hero #hero-content #social-links li:nth-child(2) {
+  -webkit-animation-name: fadeInUp;
+          animation-name: fadeInUp;
+  -webkit-animation-duration: 0.7s;
+          animation-duration: 0.7s;
+  -webkit-animation-delay: 0.7s;
+          animation-delay: 0.7s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+#hero #hero-content #social-links li:nth-child(3) {
+  -webkit-animation-name: fadeInUp;
+          animation-name: fadeInUp;
+  -webkit-animation-duration: 0.7s;
+          animation-duration: 0.7s;
+  -webkit-animation-delay: 1.1s;
+          animation-delay: 1.1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
 }
 
 #hero #scroll-icon {
@@ -147,10 +211,6 @@ h1 {
   margin: 0;
   margin-right: 20px;
   font-size: 1.5rem;
-}
-
-#projects-section .project-links li a {
-  color: #114b5fff;
 }
 
 #projects-section .project-links li:last-child {
