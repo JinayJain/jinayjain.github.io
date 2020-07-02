@@ -96,7 +96,7 @@ h1 {
                 }
                 font-size: 1.5rem;
             }
-            @for $i from 1 through 3 {
+            @for $i from 1 through 4 {
                 li:nth-child(#{$i}) {
                     animation-name: fadeInUp;
                     animation-duration: 0.7s;

@@ -158,6 +158,17 @@ h1 {
           animation-fill-mode: both;
 }
 
+#hero #hero-content #social-links li:nth-child(4) {
+  -webkit-animation-name: fadeInUp;
+          animation-name: fadeInUp;
+  -webkit-animation-duration: 0.7s;
+          animation-duration: 0.7s;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
 #hero #scroll-icon {
   width: 20px;
   fill: #f3e9d2ff;
