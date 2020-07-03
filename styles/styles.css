@@ -70,17 +70,24 @@ h1 {
 }
 
 #hero {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  height: 100vh;
+  padding-top: 50px;
+}
+
+@media (min-width: 576px) {
+  #hero {
+    padding-top: 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 100vh;
+  }
 }
 
 #hero #hero-content {
@@ -169,14 +176,25 @@ h1 {
           animation-fill-mode: both;
 }
 
+#hero #scroll-link {
+  text-align: center;
+  display: block;
+}
+
 #hero #scroll-icon {
   width: 20px;
+  margin: auto;
   fill: #f3e9d2ff;
-  position: absolute;
-  margin-left: -20px;
-  left: 50%;
-  bottom: 5vh;
-  padding: 10px;
+  position: initial;
+}
+
+@media (min-width: 576px) {
+  #hero #scroll-icon {
+    position: absolute;
+    padding: 10px;
+    bottom: 5vh;
+    left: 50%;
+  }
 }
 
 #projects {

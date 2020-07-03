@@ -58,10 +58,14 @@ h1 {
 }
 
 #hero {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100vh;
+    padding-top: 50px;
+    @include sm {
+        padding-top: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100vh;
+    }
 
     #hero-content {
         margin-left: 3vw;
@@ -107,14 +111,22 @@ h1 {
         }
     }
 
+    #scroll-link {
+        text-align: center;
+        display: block;
+    }
+
     #scroll-icon {
         width: 20px;
+        margin: auto;
         fill: $light;
-        position: absolute;
-        margin-left: -20px;
-        left: 50%;
-        bottom: 5vh;
-        padding: 10px;
+        position: initial;
+        @include sm {
+            position: absolute;
+            padding: 10px;
+            bottom: 5vh;
+            left: 50%;
+        }
     }
 }
 
