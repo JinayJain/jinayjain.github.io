@@ -62,13 +62,22 @@ h1 {
     @include sm {
         padding-top: 0px;
         display: flex;
-        flex-direction: column;
-        justify-content: center;
+        flex-direction: row;
+        align-items: center;
         height: 100vh;
+    }
+
+    #game-window {
+        @include sm {
+            display: initial;
+            flex: 2;
+        }
+        display: none;
     }
 
     #hero-content {
         margin-left: 3vw;
+        flex: 3;
         #name {
             font-size: 4rem;
             margin: 0;
