@@ -1,186 +1,180 @@
-/*
-
-    TO ANY REAL CSS/SASS DEVELOPER READING THIS, I'M SORRY.
-
-*/
-
 @import "palette";
 @import "mixins";
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono&family=Spartan:wght@400;700&display=swap");
 
 html {
-    font-family: "Spartan", sans-serif;
-    font-size: 20px;
-    font-variant-ligatures: no-common-ligatures;
+  font-family: "Spartan", sans-serif;
+  font-size: 20px;
+  font-variant-ligatures: no-common-ligatures;
 
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    background-color: $primaryDark;
-    color: $light;
-    margin: 0;
-    padding: 0;
+  background-color: $primaryDark;
+  color: $light;
+  margin: 0;
+  padding: 0;
 }
 
 p {
-    font-family: "Space Mono", monospace;
+  font-family: "Space Mono", monospace;
 }
 
 a {
-    outline: none;
-    text-decoration: underline dotted;
-    color: inherit;
+  outline: none;
+  text-decoration: underline dotted;
+  color: $primaryDark;
 
-    &:hover {
-        color: $primaryDark;
-    }
+  &:hover {
+    color: $primary;
+  }
 }
 
 h1 {
-    font-size: 2rem;
-    text-shadow: 3px 3px 0px $secondary;
+  font-size: 2rem;
+  text-shadow: 3px 3px 0px $secondary;
 }
 
 @keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        @include transform(translateY(-110%));
-    }
+  0% {
+    opacity: 0;
+    @include transform(translateY(-110%));
+  }
 
-    100% {
-        opacity: 1;
-        @include transform(translateY(0%));
-    }
+  100% {
+    opacity: 1;
+    @include transform(translateY(0%));
+  }
 }
 
 #hero {
-    padding-top: 50px;
-    @include sm {
-        padding-top: 0px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        height: 100vh;
+  padding-top: 50px;
+  @include sm {
+    padding-top: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+  }
+
+  #hero-content {
+    margin-left: 3vw;
+    #name {
+      font-size: 4rem;
+      margin: 0;
+      text-shadow: 6px 6px 0px $secondary;
+    }
+    #tagline {
+      font-family: "Space Mono", monospace;
+      font-size: 2rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
     }
 
-    #hero-content {
-        margin-left: 3vw;
-        #name {
-            font-size: 4rem;
-            margin: 0;
-            text-shadow: 6px 6px 0px $secondary;
-        }
-        #tagline {
-            font-family: "Space Mono", monospace;
-            font-size: 2rem;
-            margin-top: 0;
-            margin-bottom: 1rem;
-        }
-
-        #social-links {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            li {
-                display: block;
-                @include sm {
-                    display: inline-block;
-                    margin-right: 1.5rem;
-                }
-                margin-bottom: 1rem;
-
-                a {
-                    color: $primaryLight;
-                    text-decoration: none;
-                }
-                font-size: 1.5rem;
-            }
-            @for $i from 1 through 4 {
-                li:nth-child(#{$i}) {
-                    animation-name: fadeInUp;
-                    animation-duration: 0.7s;
-                    animation-delay: #{($i - 1) * 0.4 + 0.3}s;
-                    animation-fill-mode: both;
-                }
-            }
-        }
-    }
-
-    #scroll-link {
-        text-align: center;
+    #social-links {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      li {
         display: block;
-    }
-
-    #scroll-icon {
-        width: 20px;
-        margin: auto;
-        fill: $light;
-        position: initial;
         @include sm {
-            position: absolute;
-            padding: 10px;
-            bottom: 5vh;
-            left: 50%;
+          display: inline-block;
+          margin-right: 1.5rem;
         }
+        margin-bottom: 1rem;
+
+        a {
+          color: $primaryLight;
+          text-decoration: none;
+        }
+        font-size: 1.5rem;
+      }
+      @for $i from 1 through 4 {
+        li:nth-child(#{$i}) {
+          animation-name: fadeInUp;
+          animation-duration: 0.7s;
+          animation-delay: #{($i - 1) * 0.4 + 0.3}s;
+          animation-fill-mode: both;
+        }
+      }
     }
+  }
+
+  #scroll-link {
+    text-align: center;
+    display: block;
+  }
+
+  #scroll-icon {
+    width: 20px;
+    margin: auto;
+    fill: $light;
+    position: initial;
+    @include sm {
+      position: absolute;
+      padding: 10px;
+      bottom: 5vh;
+      left: 50%;
+    }
+  }
 }
 
 #projects {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 1vw;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1vw;
 
-    #projects-content {
-        margin: 0 5%;
+  #projects-content {
+    margin: 0 5%;
+  }
+  .project-title-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    h3 {
+      margin-bottom: 0;
+      min-width: 40%;
     }
-    .project-title-bar {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        align-items: center;
-        h3 {
-            margin-bottom: 0;
-            min-width: 40%;
-        }
-    }
-    .project-links {
-        display: inline-flex;
-        li {
-            margin: 0;
-            margin-right: 20px;
-            font-size: 1.5rem;
-        }
-
-        li:last-child {
-            margin-right: 0px;
-        }
-    }
-    #projects-header {
-        font-size: 2rem;
-        text-shadow: 3px 3px 0px $secondary;
+  }
+  .project-links {
+    display: inline-flex;
+    li {
+      margin: 0;
+      margin-right: 20px;
+      font-size: 1.5rem;
     }
 
-    ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-
-        li {
-            margin: 30px 0;
-        }
+    li:last-child {
+      margin-right: 0px;
     }
+  }
+  #projects-header {
+    font-size: 2rem;
+    text-shadow: 3px 3px 0px $secondary;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      margin: 30px 0;
+    }
+  }
 }
 
 .light-box {
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 10px 10px 0px $secondary;
-    background-color: $light;
-    color: $secondary;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 10px 10px 0px $secondary;
+  background-color: $light;
+  color: $secondary;
 }

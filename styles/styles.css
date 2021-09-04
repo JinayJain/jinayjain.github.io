@@ -1,8 +1,3 @@
-/*
-
-    TO ANY REAL CSS/SASS DEVELOPER READING THIS, I'M SORRY.
-
-*/
 /* HEX */
 /* GRADIENT */
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono&family=Spartan:wght@400;700&display=swap");
@@ -31,11 +26,11 @@ a {
   outline: none;
   -webkit-text-decoration: underline dotted;
           text-decoration: underline dotted;
-  color: inherit;
+  color: #1a936fff;
 }
 
 a:hover {
-  color: #1a936fff;
+  color: #88d498ff;
 }
 
 h1 {
