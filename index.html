@@ -1,173 +1,243 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
 
-    <script
-      src="https://kit.fontawesome.com/077e61081a.js"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="stylesheet" href="./styles/styles.css" />
+        <script
+            src="https://kit.fontawesome.com/077e61081a.js"
+            crossorigin="anonymous"
+        ></script>
+        <link rel="stylesheet" href="./styles/styles.css" />
 
-    <title>Jinay Jain</title>
-  </head>
-  <body>
-    <div id="hero">
-      <!-- TODO: Add a small MNIST demo to the right of hero content stuff-->
-      <div id="hero-content">
-        <h1 id="name">Jinay Jain</h1>
-        <h3 id="tagline">I solve your problems with data.</h3>
-        <ul id="social-links">
-          <li>
-            <a target="_blank" href="https://github.com/jinayjain/">
-              <i class="fa fa-github"></i> github
+        <title>Jinay Jain</title>
+    </head>
+    <body>
+        <div id="hero">
+            <!-- TODO: Add a small MNIST demo to the right of hero content stuff-->
+            <div id="hero-content">
+                <h1 id="name">Jinay Jain</h1>
+                <h3 id="tagline">I solve your problems with data.</h3>
+                <ul id="social-links">
+                    <li>
+                        <a target="_blank" href="https://github.com/jinayjain/">
+                            <i class="fa fa-github"></i> github
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            target="_blank"
+                            href="https://www.linkedin.com/in/jinayjain/"
+                        >
+                            <i class="fab fa-linkedin"></i> linkedin
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#projects">
+                            <i class="fa fa-code"></i> projects
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="blog">
+                            <i class="fa fa-quote-right"></i> blog
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <a id="scroll-link" href="#projects">
+                <img
+                    id="scroll-icon"
+                    src="img/down.svg"
+                    alt="keep scrolling!"
+                />
             </a>
-          </li>
-          <li>
-            <a target="_blank" href="https://www.linkedin.com/in/jinayjain/">
-              <i class="fab fa-linkedin"></i> linkedin
-            </a>
-          </li>
-          <li>
-            <a href="#projects"> <i class="fa fa-code"></i> projects </a>
-          </li>
-          <li>
-            <a target="_blank" href="blog">
-              <i class="fa fa-quote-right"></i> blog
-            </a>
-          </li>
-        </ul>
-      </div>
-      <a id="scroll-link" href="#projects">
-        <img id="scroll-icon" src="img/down.svg" alt="keep scrolling!" />
-      </a>
-    </div>
-    <section id="projects">
-      <div id="projects-content">
-        <h1 id="projects-header">Projects</h1>
+        </div>
+        <section id="projects">
+            <div id="projects-content">
+                <h1 id="projects-header">Projects</h1>
 
-        <ul>
-          <li class="light-box">
-            <div class="project-title-bar">
-              <a target="_blank" href="https://jinay.dev/backprop-vis/">
-                <h3>Backpropagation Visualizer</h3>
-              </a>
-              <ul class="project-links">
-                <li>
-                  <a
-                    target="_blank"
-                    href="https://github.com/JinayJain/backprop-vis"
-                    ><i class="project-link-item fa fa-github"></i
-                  ></a>
-                </li>
-              </ul>
+                <ul>
+                    <li class="light-box">
+                        <div class="project-title-bar">
+                            <a target="_blank" href="https://www.plorium.com/">
+                                <h3>Plorium</h3>
+                            </a>
+                            <ul class="project-links">
+                                <li>
+                                    <a
+                                        target="_blank"
+                                        href="https://www.plorium.com/"
+                                        ><i
+                                            class="project-link-item fa fa-window-maximize"
+                                        ></i
+                                    ></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <p>
+                            Plorium aims to drastically simplify the process of
+                            self-learning a new topic on the internet. Through a
+                            community-curated list of content, Plorium will help
+                            you find the best learning resources quickly and
+                            efficiently, eliminating the need for constant
+                            searching.
+                        </p>
+                        <p>
+                            I am currently building Plorium with React, Next.js,
+                            PostgreSQL, and GraphQL.
+                        </p>
+                    </li>
+                    <li class="light-box">
+                        <div class="project-title-bar">
+                            <a
+                                target="_blank"
+                                href="https://jinay.dev/just-a-minute/"
+                            >
+                                <h3>Just a Minute</h3>
+                            </a>
+                            <ul class="project-links">
+                                <li>
+                                    <a
+                                        target="_blank"
+                                        href="https://github.com/jinayjain/just-a-minute"
+                                        ><i
+                                            class="project-link-item fa fa-github"
+                                        ></i
+                                    ></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <p>
+                            Just a Minute is a web experiment designed to gauge
+                            the perception of time, simply by estimating the
+                            length of a minute. With over
+                            <b><u>100,000</u></b> players, the project went
+                            viral and was featured on the front page of Hacker
+                            News.
+                        </p>
+                        <p>
+                            I built Just a Minute using HTML/CSS/JS and
+                            Firebase. Read more about my experience in my
+                            <a href="https://blog.jinay.dev/posts/virality/"
+                                >blog post</a
+                            >.
+                        </p>
+                    </li>
+                    <li class="light-box">
+                        <div class="project-title-bar">
+                            <a
+                                target="_blank"
+                                href="https://jinay.dev/backprop-vis/"
+                            >
+                                <h3>Backpropagation Visualizer</h3>
+                            </a>
+                            <ul class="project-links">
+                                <li>
+                                    <a
+                                        target="_blank"
+                                        href="https://github.com/JinayJain/backprop-vis"
+                                        ><i
+                                            class="project-link-item fa fa-github"
+                                        ></i
+                                    ></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <p>
+                            I built a visualizer that demonstrates how
+                            backpropgation works, and how it can be used to
+                            optimize a neural network. The visualizer parses
+                            math expressions and automatically generates a
+                            computation graph from it. Finally, it automatically
+                            differentiates the math expression and shows the
+                            gradient at each node in the graph.
+                        </p>
+                        <p>
+                            To help others understand backpropagation, I wrote a
+                            <a
+                                target="_blank"
+                                href="https://blog.jinay.dev/posts/backprop/"
+                                >blog post</a
+                            >
+                            with a more detailed explanation.
+                        </p>
+                    </li>
+                    <li class="light-box">
+                        <div class="project-title-bar">
+                            <a
+                                target="_blank"
+                                href="https://github.com/JinayJain/TFCP"
+                            >
+                                <h3>TFCP</h3>
+                            </a>
+                            <ul class="project-links">
+                                <li>
+                                    <a
+                                        target="_blank"
+                                        href="https://github.com/JinayJain/TFCP"
+                                        ><i class="fa fa-github"></i
+                                    ></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <p>
+                            TFCP is a code generation AI that harnesses the
+                            large code repositories of competitive programmers
+                            and trains a recurrent neural network on their code.
+                            Using Tensorflow and Keras, I created a Python
+                            script that would learn someone's coding style and
+                            generate similar pieces of "code" that mimics their
+                            way of programming.
+                        </p>
+                        <p>
+                            Note: This project was created in 2019, before
+                            <a
+                                target="_blank"
+                                href="https://copilot.github.com/"
+                                >GitHub Copilot</a
+                            >
+                            and
+                            <a
+                                href="https://www.deepmind.com/blog/article/Competitive-programming-with-AlphaCode"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >AlphaCode</a
+                            >, so I guess they owe me some licensing fees.
+                        </p>
+                    </li>
+                    <li class="light-box">
+                        <div class="project-title-bar">
+                            <a
+                                target="_blank"
+                                href="https://vimdocs.herokuapp.com"
+                            >
+                                <h3>Vim Docs</h3>
+                            </a>
+                            <ul class="project-links">
+                                <li>
+                                    <a
+                                        target="_blank"
+                                        href="https://vimdocs.herokuapp.com"
+                                        ><i class="fa fa-window-maximize"></i
+                                    ></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <p>
+                            Vim Docs is a realtime collaborative web editor that
+                            uses basic keybindings from the
+                            <a target="_blank" href="https://www.vim.org/"
+                                >vim</a
+                            >
+                            text editor and collaboration like Google Docs. I
+                            built the site using a Vue frontend and an
+                            Express.js backend built with Node.js. I used Heroku
+                            to deploy the website and maintain it.
+                        </p>
+                    </li>
+                </ul>
             </div>
-            <p>
-              I built a visualizer that demonstrates how backpropgation works,
-              and how it can be used to optimize a neural network. The
-              visualizer parses math expressions and automatically generates a
-              computation graph from it. Finally, it automatically
-              differentiates the math expression and shows the gradient at each
-              node in the graph.
-            </p>
-            <p>
-              To help others understand backpropagation, I wrote a
-              <a target="_blank" href="https://blog.jinay.dev/posts/backprop/"
-                >blog post</a
-              >
-              with a more detailed explanation.
-            </p>
-          </li>
-          <li class="light-box">
-            <div class="project-title-bar">
-              <a target="_blank" href="https://github.com/JinayJain/TFCP">
-                <h3>TFCP</h3>
-              </a>
-              <ul class="project-links">
-                <li>
-                  <a target="_blank" href="https://github.com/JinayJain/TFCP"
-                    ><i class="fa fa-github"></i
-                  ></a>
-                </li>
-              </ul>
-            </div>
-            <p>
-              TFCP is a code generation AI that harnesses the large code
-              repositories of competitive programmers and trains a recurrent
-              neural network on their code. Using Tensorflow and Keras, I
-              created a Python script that would learn someone's coding style
-              and generate similar pieces of "code" that mimics their way of
-              programming.
-            </p>
-            <p>
-              Note: This project was created in 2019, long before
-              <a target="_blank" href="https://copilot.github.com/"
-                >GitHub Copilot</a
-              >, so I guess they owe me some licensing fees.
-            </p>
-          </li>
-          <li class="light-box">
-            <div class="project-title-bar">
-              <a target="_blank" href="https://pypi.org/project/timidity/">
-                <h3>TiMIDIty</h3>
-              </a>
-              <ul class="project-links">
-                <li>
-                  <a target="_blank" href="https://pypi.org/project/timidity/"
-                    ><i class="project-link-item fab fa-python"></i
-                  ></a>
-                </li>
-                <li>
-                  <a
-                    target="_blank"
-                    href="https://github.com/JinayJain/timidity"
-                    ><i class="project-link-item fa fa-github"></i
-                  ></a>
-                </li>
-              </ul>
-            </div>
-            <p>
-              I built a Python library that parses MIDI files in bytes and plays
-              them as audio. For this project, I employed the MIDI
-              <a
-                target="_blank"
-                href="http://www.music.mcgill.ca/~ich/classes/mumt306/StandardMIDIfileformat.html"
-                >file specification</a
-              >
-              to decode the file into audio data. To play the audio, I used
-              signal processing techniques and frequency modulation to generate
-              the audio signal that was sent to the device. Finally, I used the
-              Python packaging system to deploy TiMIDIty to the Python Package
-              Index.
-            </p>
-          </li>
-
-          <li class="light-box">
-            <div class="project-title-bar">
-              <a target="_blank" href="https://vimdocs.herokuapp.com">
-                <h3>Vim Docs</h3>
-              </a>
-              <ul class="project-links">
-                <li>
-                  <a target="_blank" href="https://vimdocs.herokuapp.com"
-                    ><i class="fa fa-window-maximize"></i
-                  ></a>
-                </li>
-              </ul>
-            </div>
-            <p>
-              Vim Docs is a realtime collaborative web editor that uses basic
-              keybindings from the
-              <a target="_blank" href="https://www.vim.org/">vim</a> text editor
-              and collaboration like Google Docs. I built the site using a Vue
-              frontend and an Express.js backend built with Node.js. I used
-              Heroku to deploy the website and maintain it.
-            </p>
-          </li>
-        </ul>
-      </div>
-    </section>
-  </body>
+        </section>
+    </body>
 </html>
