@@ -1,0 +1,87 @@
+import styles from "./styles.module.scss";
+
+const TAGS = {
+  PYTORCH: "PyTorch",
+  RL: "Reinforcement Learning",
+  CV: "Computer Vision",
+  FIREBASE: "Firebase",
+  MONGODB: "MongoDB",
+  RUST: "Rust",
+  OPENCV: "OpenCV",
+  WEB_STACK: "HTML/CSS/JS",
+  PYTHON: "Python",
+};
+
+const PROJECTS = [
+  {
+    title: "Self-Driving Racecar",
+    description:
+      "A virtual self-driving car that uses computer vision and deep reinforcement learning (PPO) to navigate a 2D game.",
+    image: "/img/project/car.gif",
+    tags: [TAGS.PYTORCH, TAGS.RL, TAGS.CV, TAGS.PYTHON],
+  },
+  {
+    title: "Bounce",
+    description:
+      "A Rust-based ray tracer with support for multithreading, bounding volume hierarchies, .obj file loading, and more.",
+    image: "/img/project/bounce.png",
+    tags: [TAGS.RUST],
+  },
+  {
+    title: "Just a Minute",
+    description:
+      "A web experiment to see how well you can estimate a minute, played over 100k times.",
+    image: "/img/project/just-a-minute.png",
+    tags: [TAGS.WEB_STACK, TAGS.FIREBASE],
+  },
+  {
+    title: "Backpropagation Visualization",
+    description:
+      "A tool to help visualize the use of backpropagation on a computation graph and auto-differentiation engine.",
+    image: "/img/project/backprop.gif",
+    tags: [TAGS.WEB_STACK],
+  },
+  {
+    title: "Timekeeper",
+    description:
+      "Telling the time from a picture of an analog clock with computer vision with OpenCV and PyTorch.",
+    image: "/img/project/timekeeper.png",
+    tags: [TAGS.PYTORCH, TAGS.CV, TAGS.PYTHON],
+  },
+  {
+    title: "Warp",
+    description:
+      "A link shortener that takes you through space at warp speed with Google Cloud and MongoDB",
+    image: "/img/project/warp.gif",
+    tags: [TAGS.MONGODB, TAGS.WEB_STACK],
+  },
+];
+
+const Projects = () => {
+  return (
+    <div className="container" id="projects">
+      <h1 className="header">Projects</h1>
+      <div className={styles.cardBox}>
+        {PROJECTS.map(({ title, description, image, tags }) => (
+          <div key={title} className={styles.card}>
+            <img src={image} alt={title} className={styles.bg} />
+            <p className={styles.tags}>
+              {tags.map((tag, index) => (
+                <>
+                  <span key={tag}>{tag}</span>
+                  {index !== tags.length - 1 && <span>/</span>}
+                </>
+              ))}
+            </p>
+            <div className={styles.info}>
+              <h2>{title}</h2>
+              <p>{description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default Projects;

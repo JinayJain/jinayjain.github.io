@@ -1,0 +1,27 @@
+.section {
+  padding-top: 1rem;
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  padding: 1rem 0;
+
+  font-size: 1.5rem;
+
+  a {
+    margin-right: 2rem;
+    text-decoration: none;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.greeting {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}

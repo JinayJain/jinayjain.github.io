@@ -1,0 +1,87 @@
+@use "/src/variables" as v;
+
+.navWrapper {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: v.$nav-height;
+  background-color: v.$background;
+
+  z-index: 1;
+}
+
+.nav {
+  max-width: v.$layout-width;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 100%;
+
+  h1 {
+    font-weight: 700;
+
+    transition: text-shadow 0.2s ease-in-out;
+
+    &:hover {
+      text-shadow: 0.25rem 0.25rem 0 v.$secondary;
+    }
+  }
+}
+
+.links {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  display: flex;
+  flex-direction: row;
+
+  li {
+    margin-right: 2rem;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  a {
+    color: v.$color;
+    text-decoration: none;
+
+    $transition-time: 0.3s;
+
+    &::before,
+    &::after {
+      content: "";
+      display: block;
+      width: 0;
+      height: 2px;
+      background-color: v.$primary;
+      transition: width $transition-time cubic-bezier(0.165, 0.84, 0.44, 1),
+        opacity $transition-time ease-out;
+
+      opacity: 0;
+    }
+
+    &::after {
+      transition-delay: calc($transition-time / 4);
+    }
+
+    &:hover {
+      &::before,
+      &::after {
+        opacity: 1;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.logo {
+  &:hover {
+    text-decoration: none;
+  }
+}
