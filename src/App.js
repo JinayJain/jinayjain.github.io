@@ -6,9 +6,14 @@ import Simulation from "./components/Simulation";
 
 function App() {
   return (
-    <div className="App">
+    <div
+      className="App"
+      style={{
+        paddingBottom: "100px",
+      }}
+    >
       <Nav />
-      <Simulation />
+      {/* <Simulation /> */}
       <About />
       <Projects />
     </div>
