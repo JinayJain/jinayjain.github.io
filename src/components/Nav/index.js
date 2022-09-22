@@ -1,4 +1,5 @@
 import styles from "./styles.module.scss";
+import { useState } from "react";
 
 // about, projects, experience, awards, contact
 
@@ -18,6 +19,8 @@ const LINKS = [
 ];
 
 const Nav = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <nav className={styles.navWrapper}>
       <div className={styles.nav}>
@@ -26,9 +29,11 @@ const Nav = () => {
             <span className="fg">JINAY</span> JAIN
           </h1>
         </a>
-        <ul className={styles.links}>
+        <ul
+          className={isOpen ? `${styles.links} ${styles.open}` : styles.links}
+        >
           {LINKS.map(({ label, path }) => (
-            <li key={label}>
+            <li key={label} onClick={() => setIsOpen(false)}>
               <a href={path}>{label}</a>
             </li>
           ))}
@@ -37,6 +42,15 @@ const Nav = () => {
         <a href="mailto:hi@jinay.dev" className={styles.cta}>
           hi@jinay.dev
         </a>
+
+        <div
+          className={`${styles.hamburger} ${isOpen ? styles.open : ""}`}
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          <div className={`${styles.line}`}></div>
+          <div className={`${styles.line}`}></div>
+          <div className={`${styles.line}`}></div>
+        </div>
       </div>
     </nav>
   );
