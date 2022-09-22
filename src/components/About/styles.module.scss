@@ -1,8 +1,18 @@
+@use "/src/mixins" as *;
+
 .section {
   padding-top: 1rem;
 }
 
 .links {
+  @include md {
+    flex-direction: column;
+
+    a {
+      margin-bottom: 0.5rem;
+    }
+  }
+
   display: flex;
   flex-direction: row;
   justify-content: center;
