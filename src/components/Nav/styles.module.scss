@@ -1,4 +1,5 @@
 @use "/src/variables" as v;
+@use "/src/mixins" as *;
 
 .navWrapper {
   position: sticky;
@@ -12,6 +13,10 @@
 }
 
 .nav {
+  @include md {
+    margin: 0 1rem;
+  }
+
   max-width: v.$layout-width;
   margin: auto;
   display: flex;
@@ -32,6 +37,30 @@
 }
 
 .links {
+  @include md {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+
+    max-height: 0;
+    overflow: hidden;
+
+    transition: max-height 0.3s ease-in-out;
+
+    &.open {
+      max-height: 100vh;
+    }
+
+    background-color: v.$background;
+    flex-direction: column;
+
+    li {
+      margin-bottom: 1rem;
+      padding: 0.5rem 1rem;
+    }
+  }
+
   margin: 0;
   padding: 0;
   list-style: none;
@@ -83,5 +112,46 @@
 .logo {
   &:hover {
     text-decoration: none;
+  }
+}
+
+.hamburger {
+  display: none;
+  @include md {
+    display: block;
+    &:hover {
+      cursor: pointer;
+
+      .line {
+        background-color: v.$primary;
+      }
+    }
+  }
+}
+
+.line {
+  width: 2rem;
+  height: 2px;
+  background-color: v.$color;
+  margin: 0.25rem 0;
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+.hamburger.open {
+  .line {
+    &:nth-child(1) {
+      transform: rotate(45deg) translateY(0.5rem);
+      width: 1.5rem;
+    }
+
+    &:nth-child(2) {
+      opacity: 0;
+    }
+
+    &:nth-child(3) {
+      transform: rotate(-45deg) translateY(-0.5rem);
+      width: 1.5rem;
+    }
   }
 }

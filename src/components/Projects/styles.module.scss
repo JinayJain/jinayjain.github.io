@@ -1,5 +1,13 @@
 @use "/src/variables" as v;
 
+.cardlink {
+  color: inherit;
+  &:hover {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
 .card {
   padding: 1rem;
   min-height: 400px;
