@@ -10,6 +10,9 @@ const TAGS = {
   OPENCV: "OpenCV",
   WEB_STACK: "HTML/CSS/JS",
   PYTHON: "Python",
+  REACT: "React",
+  NEXTJS: "Next.js",
+  SQL: "SQL",
 };
 
 const PROJECTS = [
@@ -60,6 +63,13 @@ const PROJECTS = [
     image: "/img/project/warp.gif",
     tags: [TAGS.MONGODB, TAGS.WEB_STACK],
     link: "https://to.jinay.dev/",
+  },
+  {
+    title: "Dance Tool",
+    description: "The ultimate dance practice tool with over 300 users",
+    image: "/img/project/dance-tool.png",
+    tags: [TAGS.REACT, TAGS.NEXTJS, TAGS.SQL],
+    link: "https://dance.jinay.dev/",
   },
 ];
 
