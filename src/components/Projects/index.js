@@ -13,6 +13,7 @@ const TAGS = {
   REACT: "React",
   NEXTJS: "Next.js",
   SQL: "SQL",
+  GPT: "GPT-3",
 };
 
 const PROJECTS = [
@@ -39,6 +40,14 @@ const PROJECTS = [
     image: "/img/project/just-a-minute.png",
     tags: [TAGS.WEB_STACK, TAGS.FIREBASE],
     link: "https://jinay.dev/just-a-minute/",
+  },
+  {
+    title: "GPT Anywhere",
+    description:
+      "A desktop app that lets you use GPT-3 at the press of a button.",
+    image: "/img/project/gpt-anywhere.gif",
+    tags: [TAGS.RUST, TAGS.GPT],
+    link: "https://jinay.dev/gpt-anywhere/",
   },
   {
     title: "Backpropagation Visualization",
