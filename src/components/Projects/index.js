@@ -46,7 +46,7 @@ const PROJECTS = [
     description:
       "A desktop app that lets you use GPT-3 at the press of a button.",
     image: "/img/project/gpt-anywhere.gif",
-    tags: [TAGS.RUST, TAGS.GPT],
+    tags: [TAGS.REACT, TAGS.RUST, TAGS.GPT],
     link: "https://jinay.dev/gpt-anywhere/",
   },
   {
