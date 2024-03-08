@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 import { Link } from "./Link";
-import { animated } from "@react-spring/web";
+import { animated, useSpring } from "@react-spring/web";
 
 const PROJECTS: {
   title: string;
@@ -105,14 +105,31 @@ const PROJECTS: {
 ];
 
 function Project({ project }: { project: (typeof PROJECTS)[0] }) {
-  const [hovered, setHovered] = useState(false);
+  const [props, api] = useSpring(() => ({
+    opacity: 0,
+  }));
+
+  const onEnter = () => {
+    api.start({
+      opacity: 1,
+      config: {
+        duration: 300,
+      },
+    });
+  };
+
+  const onLeave = () => {
+    api.start({
+      opacity: 0,
+      config: {
+        duration: 100,
+      },
+    });
+  };
 
   return (
     <li>
-      <p
-        onMouseEnter={() => setHovered(true)}
-        onMouseLeave={() => setHovered(false)}
-      >
+      <p onMouseEnter={onEnter} onMouseLeave={onLeave}>
         <Link href={project.url}>{project.title}</Link>
         {project.codeUrl && (
           <span>
@@ -122,10 +139,10 @@ function Project({ project }: { project: (typeof PROJECTS)[0] }) {
         )}
         : {project.description}
       </p>
-      {project.img && hovered && (
-        <animated.div>
+      {project.img && (
+        <animated.div style={props}>
           <img
-            className="absolute md:max-h-96 max-h-32 shadow-lg"
+            className="absolute max-h-[40vh] shadow-lg rounded-md transition-opacity pointer-events-none"
             src={project.img}
             alt={project.title}
           />
