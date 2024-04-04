@@ -20,7 +20,7 @@ const PROJECTS: {
   {
     title: "Self-Driving 2D Racer",
     descriptionHtml:
-      'reinforcement learning (PPO) to drive a virtual F1 car (cited in <a href="https://openreview.net/pdf?id=hWwY_Jq0xsN" class="underline hover:text-blue-500">ICLR 2023</a>)',
+      'reinforcement learning (PPO) to drive a virtual F1 car (cited in <a href="https://openreview.net/pdf?id=hWwY_Jq0xsN" class="underline hover:text-blue-500" target="_blank">ICLR 2023</a>)',
     url: "https://www.youtube.com/watch?v=s1uKkmNiNhM",
     codeUrl: "https://github.com/JinayJain/deep-racing",
     img: "/img/project/deep-racing.gif",
