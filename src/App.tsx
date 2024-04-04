@@ -4,42 +4,50 @@ import { animated, useSpring } from "@react-spring/web";
 
 const PROJECTS: {
   title: string;
-  description: string;
+  descriptionHtml: string;
   url?: string;
   codeUrl?: string;
   img?: string;
 }[] = [
   {
     title: "Cadenza",
-    description:
+    descriptionHtml:
       "using transformers to generate piano masterpieces, built from scratch",
     url: "https://drive.google.com/drive/folders/1u8wGB-KTlGDOXULK6XkoH6LhYJYEucC_",
     codeUrl: "https://github.com/JinayJain/cadenza",
     img: "/img/project/cadenza.png",
   },
   {
+    title: "Self-Driving 2D Racer",
+    descriptionHtml:
+      'reinforcement learning (PPO) to drive a virtual F1 car (cited in <a href="https://openreview.net/pdf?id=hWwY_Jq0xsN" class="underline hover:text-blue-500">ICLR 2023</a>)',
+    url: "https://www.youtube.com/watch?v=s1uKkmNiNhM",
+    codeUrl: "https://github.com/JinayJain/deep-racing",
+    img: "/img/project/deep-racing.gif",
+  },
+  {
     title: "Memory Lane",
-    description: "relive your memories in augmented reality",
+    descriptionHtml: "relive your memories in augmented reality",
     url: "https://twitter.com/jinaycodes/status/1677318180992155658",
     img: "/img/project/memory-lane.gif",
   },
   {
     title: "GPT Anywhere",
-    description: "access GPT at the push of a button (1,400+ downloads)",
+    descriptionHtml: "access GPT at the push of a button (1,400+ downloads)",
     url: "https://jinay.dev/gpt-anywhere/",
     codeUrl: "https://github.com/JinayJain/gpt-anywhere",
     img: "/img/project/gpt-anywhere.gif",
   },
   {
     title: "Eddy",
-    description: "AI-assisted mind mapping at the speed of thought",
+    descriptionHtml: "AI-assisted mind mapping at the speed of thought",
     url: "https://devpost.com/software/eddy-zx9uto",
     codeUrl: "https://github.com/joyliu-q/eddy",
     img: "/img/project/eddy.jpg",
   },
   {
     title: "Just a Minute",
-    description:
+    descriptionHtml:
       "how well can you estimate the length of a minute? (played 130k+ times)",
     url: "https://jinay.dev/just-a-minute/",
     codeUrl: "https://github.com/JinayJain/just-a-minute",
@@ -47,28 +55,28 @@ const PROJECTS: {
   },
   {
     title: "Timekeeper",
-    description: "using computer vision to tell the time",
+    descriptionHtml: "using computer vision to tell the time",
     url: "https://blog.jinay.dev/posts/timekeeper/",
     codeUrl: "https://github.com/JinayJain/timekeeper",
     img: "/img/project/timekeeper.png",
   },
   {
     title: "Strand",
-    description:
+    descriptionHtml:
       "collaborative storytelling with a new, AI-generated prompt every day",
     url: "https://strand.jinay.dev/",
     img: "/img/project/strand.png",
   },
   {
     title: "Bounce",
-    description: "multithreaded raytracer written in Rust",
+    descriptionHtml: "multithreaded raytracer written in Rust",
     url: "https://github.com/JinayJain/bounce",
     codeUrl: "https://github.com/JinayJain/bounce",
     img: "/img/project/bounce.png",
   },
   {
     title: "Backpropagation Visualization",
-    description:
+    descriptionHtml:
       "explore the inner workings of backprop on a computation graph",
     url: "https://jinay.dev/backprop-vis/",
     codeUrl: "https://github.com/JinayJain/backprop-vis",
@@ -76,28 +84,21 @@ const PROJECTS: {
   },
   {
     title: "Parallel Fluid Simulation",
-    description: "fluid simulation on the GPU with OpenACC",
+    descriptionHtml: "fluid simulation on the GPU with OpenACC",
     url: "https://www.youtube.com/watch?v=wJig-ARfRPA",
     codeUrl: "https://github.com/JinayJain/fluid-sim",
     img: "/img/project/fluid-sim.gif",
   },
   {
-    title: "Self-Driving 2D Racer",
-    description: "reinforcement learning (PPO) to drive a simulated F1 car",
-    url: "https://www.youtube.com/watch?v=s1uKkmNiNhM",
-    codeUrl: "https://github.com/JinayJain/deep-racing",
-    img: "/img/project/deep-racing.gif",
-  },
-  {
     title: "Warp",
-    description: "a link shortener that takes you through hyperspace",
+    descriptionHtml: "a link shortener that takes you through hyperspace",
     url: "https://to.jinay.dev/",
     codeUrl: "https://github.com/JinayJain/warp",
     img: "/img/project/warp.gif",
   },
   {
     title: "Dance Tool",
-    description: "a video player built for learning dance",
+    descriptionHtml: "a video player built for learning dance",
     url: "https://dance.jinay.dev/",
     codeUrl: "https://github.com/JinayJain/play",
     img: "/img/project/dance-tool.png",
@@ -137,7 +138,7 @@ function Project({ project }: { project: (typeof PROJECTS)[0] }) {
             [<Link href={project.codeUrl}>code</Link>]
           </span>
         )}
-        : {project.description}
+        : <span dangerouslySetInnerHTML={{ __html: project.descriptionHtml }} />
       </p>
       {project.img && (
         <animated.div style={props}>
