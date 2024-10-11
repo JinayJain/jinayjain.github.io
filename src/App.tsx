@@ -260,11 +260,13 @@ function App() {
         <div>
           <h1 className="text-2xl font-bold">Jinay Jain</h1>
           <h3 className="text-lg">
-            SWE @ <Link href="https://www.virtu.com/">Virtu Financial</Link>.{" "}
-            <Link href="https://neo.com/">Neo Scholar</Link>. Maker.
+            Tinkering full-time on personal projects.{" "}
+            <Link href="https://neo.com/scholars">Neo Scholar</Link>.
           </h3>
           <h4 className="text-md text-gray-500">
-            Previously: <Link href="https://maticrobots.com/">Matician</Link>,{" "}
+            Previously:{" "}
+            <Link href="https://www.virtu.com/">Virtu Financial</Link>,{" "}
+            <Link href="https://maticrobots.com/">Matician</Link>,{" "}
             <Link href="https://schoolhouse.world/">Schoolhouse.world</Link>,
             University of Delaware
           </h4>
@@ -276,8 +278,8 @@ function App() {
           <Link href="https://www.instagram.com/jinay.photo/">
             photographer
           </Link>
-          , filmmaker, dancer, and chef. I&apos;m currently based in New York
-          City.
+          , filmmaker, dancer, and chef. If you&apos;re hiring, reach out via
+          email.
         </p>
 
         <ul className="md:inline-flex md:space-x-2">
@@ -302,11 +304,6 @@ function App() {
 
         <div>
           <h3 className="text-lg font-bold">Projects</h3>
-
-          {/* <p>
-            I learn best by building, so are a few things I&apos;ve learned
-            about:
-          </p> */}
 
           <ul className="space-y-1">
             {PROJECTS.map((project) => (
@@ -352,6 +349,10 @@ function App() {
 
           <ul>
             <li>
+              <Link href="https://90days.jinay.dev/">90 Days</Link>: Blog posts
+              from the first 90 days after quitting my job
+            </li>
+            <li>
               <Link href="https://jjain.substack.com/p/interfaces-all-the-way-down">
                 Interfaces All The Way Down
               </Link>{" "}
@@ -359,7 +360,7 @@ function App() {
               <Link href="https://news.ycombinator.com/item?id=36836433">
                 HN front page
               </Link>
-              ] : How better interfaces lead to happier developers
+              ]: How better interfaces lead to happier developers
             </li>
             <li>
               <Link href="https://jjain.substack.com/p/the-myth-of-the-finished-project">
@@ -375,7 +376,7 @@ function App() {
               <Link href="https://news.ycombinator.com/item?id=29393903">
                 HN front page
               </Link>
-              ] : The story of Just a Minute
+              ]: The story of Just a Minute
             </li>
           </ul>
         </div>
