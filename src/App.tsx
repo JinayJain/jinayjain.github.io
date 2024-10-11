@@ -10,6 +10,18 @@ const PROJECTS: {
   img?: string;
 }[] = [
   {
+    title: "Aurora",
+    descriptionHtml: "Chrome extension that puts LLMs in your browser",
+    url: "https://aurora.jinay.dev/",
+    img: "/img/project/aurora.png",
+  },
+  {
+    title: "WavePen",
+    descriptionHtml: "modular synthesis in the browser",
+    url: "https://wavepen.jinay.dev/",
+    img: "/img/project/wavepen.png",
+  },
+  {
     title: "Cadenza",
     descriptionHtml:
       "using transformers to generate piano masterpieces, built from scratch",
