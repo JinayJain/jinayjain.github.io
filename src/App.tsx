@@ -10,6 +10,14 @@ const PROJECTS: {
   img?: string;
 }[] = [
   {
+    title: "Sonata",
+    descriptionHtml:
+      "transformers for music generation, implemented in PyTorch",
+    url: "https://drive.google.com/drive/folders/1u8wGB-KTlGDOXULK6XkoH6LhYJYEucC_",
+    codeUrl: "https://github.com/JinayJain/sonata",
+    img: "/img/project/sonata.jpg",
+  },
+  {
     title: "Aurora",
     descriptionHtml: "Chrome extension that puts LLMs in your browser",
     url: "https://aurora.jinay.dev/",
@@ -20,14 +28,6 @@ const PROJECTS: {
     descriptionHtml: "modular synthesis in the browser",
     url: "https://wavepen.jinay.dev/",
     img: "/img/project/wavepen.png",
-  },
-  {
-    title: "Cadenza",
-    descriptionHtml:
-      "using transformers to generate piano masterpieces, built from scratch",
-    url: "https://drive.google.com/drive/folders/1u8wGB-KTlGDOXULK6XkoH6LhYJYEucC_",
-    codeUrl: "https://github.com/JinayJain/cadenza",
-    img: "/img/project/cadenza.png",
   },
   {
     title: "Self-Driving 2D Racer",
@@ -232,19 +232,19 @@ function Music() {
         <span className="text-gray-500 text-sm">
           Click to hear{" "}
           <Link
-            href="https://github.com/JinayJain/cadenza"
+            href="https://github.com/JinayJain/sonata"
             onClick={(e) => {
               e.stopPropagation();
             }}
           >
-            Cadenza
+            Sonata
           </Link>{" "}
           play piano
         </span>
       </div>
 
       <audio ref={audioRef} loop>
-        <source src="/media/cadenza.mp3" />
+        <source src="/media/sonata.mp3" />
       </audio>
     </div>
   );
