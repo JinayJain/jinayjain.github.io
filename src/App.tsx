@@ -349,6 +349,12 @@ function App() {
 
           <ul>
             <li>
+              <Link href="https://jjain.substack.com/p/knowledge-arbitrage-in-a-pre-agi">
+                Knowledge Arbitrage in a Pre-AGI World
+              </Link>
+              : How pre-AGI AI can change scientific discovery
+            </li>
+            <li>
               <Link href="https://90days.jinay.dev/">90 Days</Link>: Blog posts
               from the first 90 days after quitting my job
             </li>
