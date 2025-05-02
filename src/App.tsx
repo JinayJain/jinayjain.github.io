@@ -45,7 +45,7 @@ const PROJECTS: {
   },
   {
     title: "GPT Anywhere",
-    descriptionHtml: "access GPT at the push of a button (1,400+ downloads)",
+    descriptionHtml: "access GPT at the push of a button (2,000+ downloads)",
     url: "https://jinay.dev/gpt-anywhere/",
     codeUrl: "https://github.com/JinayJain/gpt-anywhere",
     img: "/img/project/gpt-anywhere.gif",
