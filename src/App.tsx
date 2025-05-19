@@ -272,7 +272,7 @@ function App() {
           <h4 className="text-md text-gray-500">
             Previously:{" "}
             <Link href="https://www.virtu.com/">Virtu Financial</Link>,{" "}
-            <Link href="https://maticrobots.com/">Matician</Link>,{" "}
+            <Link href="https://maticrobots.com/">Matic Robots</Link>,{" "}
             <Link href="https://schoolhouse.world/">Schoolhouse.world</Link>,
             University of Delaware
           </h4>
