@@ -10,6 +10,12 @@ const PROJECTS: {
   img?: string;
 }[] = [
   {
+    title: "soarXiv",
+    descriptionHtml:
+      "the most beautiful way to explore arXiv (<a href='https://www.youtube.com/watch?v=5uG2GCSiJu8' class='underline hover:text-blue-500' target='_blank'>demo</a>)",
+    url: "https://soarxiv.org/",
+  },
+  {
     title: "Sonata",
     descriptionHtml:
       "transformers for music generation, implemented in PyTorch",
